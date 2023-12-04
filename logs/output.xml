@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231204 10:35:46.200" rpa="false" schemaversion="4">
+<suite id="s1" name="casesSPTF" source="C:\Projects\Spotify-robot\Tests\casesSPTF.robot">
+<test id="s1-t1" name="Register Without Agree with Terms" line="162">
+<kw name="New session" library="base_sptf">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231204 10:35:47.641" level="INFO">Opening browser 'chrome' to base url 'https://open.spotify.com/intl-pt?'.</msg>
+<status status="PASS" starttime="20231204 10:35:47.637" endtime="20231204 10:35:54.827"/>
+</kw>
+<status status="PASS" starttime="20231204 10:35:47.635" endtime="20231204 10:35:54.827"/>
+</kw>
+<kw name="Click on SignUp button" library="base_sptf">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@class="Button-sc-1dqy6lx-0 eOxaqu sibxBMlr_oxWTfBrEz2G"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 10:35:54.839" level="INFO">Clicking element 'xpath=//button[@class="Button-sc-1dqy6lx-0 eOxaqu sibxBMlr_oxWTfBrEz2G"]'.</msg>
+<status status="PASS" starttime="20231204 10:35:54.837" endtime="20231204 10:35:56.106"/>
+</kw>
+<status status="PASS" starttime="20231204 10:35:54.836" endtime="20231204 10:35:56.106"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Inscrever-se</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231204 10:36:01.091" level="INFO">Current page contains text 'Inscrever-se'.</msg>
+<status status="PASS" starttime="20231204 10:35:56.107" endtime="20231204 10:36:01.091"/>
+</kw>
+<kw name="SignUp With email" library="base_sptf">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@id="username"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 10:36:01.092" endtime="20231204 10:36:01.174"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAILFAKE}</var>
+<msg timestamp="20231204 10:36:01.176" level="INFO">${EMAILFAKE} = adammclean@example.net</msg>
+<status status="PASS" starttime="20231204 10:36:01.175" endtime="20231204 10:36:01.176"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${email}</arg>
+<arg>${EMAILFAKE}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231204 10:36:01.178" level="INFO">${email} = adammclean@example.net</msg>
+<status status="PASS" starttime="20231204 10:36:01.177" endtime="20231204 10:36:01.178"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id="username"]</arg>
+<arg>${EMAILFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:01.180" level="INFO">Typing text 'adammclean@example.net' into text field 'xpath=//input[@id="username"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:01.178" endtime="20231204 10:36:01.830"/>
+</kw>
+<status status="PASS" starttime="20231204 10:36:01.092" endtime="20231204 10:36:01.830"/>
+</kw>
+<kw name="Click on Submit Button" library="base_sptf">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 10:36:02.833" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231204 10:36:01.832" endtime="20231204 10:36:02.833"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@data-testid="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:02.834" level="INFO">Clicking element 'xpath=//button[@data-testid="submit"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:02.833" endtime="20231204 10:36:03.073"/>
+</kw>
+<status status="PASS" starttime="20231204 10:36:01.831" endtime="20231204 10:36:03.073"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Crie uma senha</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231204 10:36:03.127" level="INFO">Current page contains text 'Crie uma senha'.</msg>
+<status status="PASS" starttime="20231204 10:36:03.074" endtime="20231204 10:36:03.127"/>
+</kw>
+<kw name="Set up new password" library="base_sptf">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@id="new-password"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 10:36:03.128" endtime="20231204 10:36:03.183"/>
+</kw>
+<kw name="Password" library="FakerLibrary">
+<var>${PASSWORDFAKE}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<msg timestamp="20231204 10:36:03.185" level="INFO">${PASSWORDFAKE} = 7&amp;#8FsDvCa</msg>
+<status status="PASS" starttime="20231204 10:36:03.184" endtime="20231204 10:36:03.185"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${password}</arg>
+<arg>${PASSWORDFAKE}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231204 10:36:03.189" level="INFO">${password} = 7&amp;#8FsDvCa</msg>
+<status status="PASS" starttime="20231204 10:36:03.185" endtime="20231204 10:36:03.189"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id="new-password"]</arg>
+<arg>${PASSWORDFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:03.191" level="INFO">Typing text '7&amp;#8FsDvCa' into text field 'xpath=//input[@id="new-password"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:03.190" endtime="20231204 10:36:03.496"/>
+</kw>
+<status status="PASS" starttime="20231204 10:36:03.128" endtime="20231204 10:36:03.496"/>
+</kw>
+<kw name="Click on Submit Button" library="base_sptf">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 10:36:04.498" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231204 10:36:03.497" endtime="20231204 10:36:04.499"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@data-testid="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:04.500" level="INFO">Clicking element 'xpath=//button[@data-testid="submit"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:04.499" endtime="20231204 10:36:04.715"/>
+</kw>
+<status status="PASS" starttime="20231204 10:36:03.497" endtime="20231204 10:36:04.716"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Fale de você</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231204 10:36:04.760" level="INFO">Current page contains text 'Fale de você'.</msg>
+<status status="PASS" starttime="20231204 10:36:04.716" endtime="20231204 10:36:04.760"/>
+</kw>
+<kw name="Finish sign up" library="base_sptf">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@name="displayName"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 10:36:04.761" endtime="20231204 10:36:05.046"/>
+</kw>
+<kw name="Name" library="FakerLibrary">
+<var>${NOMEFAKE}</var>
+<doc>:example: 'John Doe'</doc>
+<msg timestamp="20231204 10:36:05.047" level="INFO">${NOMEFAKE} = Julie Smith</msg>
+<status status="PASS" starttime="20231204 10:36:05.046" endtime="20231204 10:36:05.047"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name="displayName"]</arg>
+<arg>${NOMEFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:05.047" level="INFO">Typing text 'Julie Smith' into text field 'xpath=//input[@name="displayName"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:05.047" endtime="20231204 10:36:05.371"/>
+</kw>
+<kw name="Date" library="FakerLibrary">
+<var>${DATAFAKE}</var>
+<doc>Get a date string between January 1, 1970 and now.</doc>
+<msg timestamp="20231204 10:36:05.372" level="INFO">${DATAFAKE} = 1981-01-21</msg>
+<status status="PASS" starttime="20231204 10:36:05.372" endtime="20231204 10:36:05.373"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id="day"]</arg>
+<arg>${DATAFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:05.374" level="INFO">Typing text '1981-01-21' into text field 'xpath=//input[@id="day"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:05.373" endtime="20231204 10:36:05.612"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>xpath=//select[@id="month"]</arg>
+<arg>janeiro</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231204 10:36:05.613" level="INFO">Selecting options from selection list 'xpath=//select[@id="month"]' by label janeiro.</msg>
+<status status="PASS" starttime="20231204 10:36:05.613" endtime="20231204 10:36:05.897"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${random_year}</var>
+<arg>random.randint(1900, 2005)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231204 10:36:05.899" level="INFO">${random_year} = 2003</msg>
+<status status="PASS" starttime="20231204 10:36:05.898" endtime="20231204 10:36:05.899"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id="year"]</arg>
+<arg>${random_year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:05.900" level="INFO">Typing text '2003' into text field 'xpath=//input[@id="year"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:05.899" endtime="20231204 10:36:06.196"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${random_year}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231204 10:36:06.196" level="INFO">2003</msg>
+<status status="PASS" starttime="20231204 10:36:06.196" endtime="20231204 10:36:06.196"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//label[@for="gender_option_male"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:06.197" level="INFO">Clicking element 'xpath=//label[@for="gender_option_male"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:06.197" endtime="20231204 10:36:06.377"/>
+</kw>
+<status status="PASS" starttime="20231204 10:36:04.760" endtime="20231204 10:36:06.377"/>
+</kw>
+<kw name="Click on Submit Button" library="base_sptf">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 10:36:07.379" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231204 10:36:06.377" endtime="20231204 10:36:07.379"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@data-testid="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:07.380" level="INFO">Clicking element 'xpath=//button[@data-testid="submit"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:07.379" endtime="20231204 10:36:07.602"/>
+</kw>
+<status status="PASS" starttime="20231204 10:36:06.377" endtime="20231204 10:36:07.602"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Termos e Condições</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231204 10:36:07.650" level="INFO">Current page contains text 'Termos e Condições'.</msg>
+<status status="PASS" starttime="20231204 10:36:07.602" endtime="20231204 10:36:07.650"/>
+</kw>
+<kw name="Click on Submit Button" library="base_sptf">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 10:36:08.651" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231204 10:36:07.651" endtime="20231204 10:36:08.651"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@data-testid="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 10:36:08.651" level="INFO">Clicking element 'xpath=//button[@data-testid="submit"]'.</msg>
+<status status="PASS" starttime="20231204 10:36:08.651" endtime="20231204 10:36:08.813"/>
+</kw>
+<status status="PASS" starttime="20231204 10:36:07.650" endtime="20231204 10:36:08.813"/>
+</kw>
+<kw name="Must Check Terms and conditions" library="base_sptf">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//div[@id="tc-error-message"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 10:36:08.814" endtime="20231204 10:36:08.860"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Aceite os termos e condições para continuar.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231204 10:36:08.887" level="INFO">Current page contains text 'Aceite os termos e condições para continuar.'.</msg>
+<status status="PASS" starttime="20231204 10:36:08.860" endtime="20231204 10:36:08.887"/>
+</kw>
+<status status="PASS" starttime="20231204 10:36:08.814" endtime="20231204 10:36:08.887"/>
+</kw>
+<tag>register_without_terms</tag>
+<status status="PASS" starttime="20231204 10:35:47.633" endtime="20231204 10:36:08.889"/>
+</test>
+<status status="PASS" starttime="20231204 10:35:46.204" endtime="20231204 10:36:08.890"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">register_without_terms</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="casesSPTF">casesSPTF</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
