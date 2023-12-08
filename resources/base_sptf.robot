@@ -83,7 +83,7 @@ Login Without Email
     Page Should Contain              Insira seu nome de usuário ou endereço de e-mail do Spotify.       #validating the error message
 
 Error No Email                     #trying to register a new user without email
-    Wait Until Element Is Visible    xpath=//input[@id="username"]      10      #this xpath belongs do text box that isn`t visible for a while
+    Wait Until Element Is Visible    xpath=//input[@id="username"]      10      #this xpath belongs to text box that isn`t visible for a while
     Click Element                    xpath=//button[@data-testid="submit"]
 
     Wait Until Element Is Visible    xpath=//div[@id="username-error-message"]      10
@@ -102,6 +102,7 @@ Password Must Have 8 Characters
 
     Click Element                    xpath=//button[@data-testid="submit"]
 
+Message Error Must Have 8 Characters
     Wait Until Element Is Visible       xpath=//div[@id="password-error-message"]       10
     Page Should Contain     A senha deve ter pelo menos 8 caracteres.
 
@@ -119,6 +120,7 @@ Must Have a Name
 
     Click Element                    xpath=//button[@data-testid="submit"]      #I already put the click on Next button because the validation depends on this path to confirm the error message
 
+Message Error Must Have a Name
     Wait Until Element Is Visible       xpath=//div[@id="displayname-error-message"]        10
     Page Should Contain     Insira um nome para seu perfil.
 
@@ -131,6 +133,7 @@ Must Have Birth Date
 
     Click Element                    xpath=//button[@data-testid="submit"]      #I already put the click on Next button because the validation depends on this path to confirm the error message
 
+Message Error Must Have a Birth Date
     Wait Until Element Is Visible       xpath=//div[@id="birthdate-error-invalid"]        10
     Page Should Contain     Insira sua data de nascimento.
 
@@ -149,7 +152,8 @@ Must Select a Gender
     Log     ${random_year}
 
     Click Element                    xpath=//button[@data-testid="submit"]      #I already put the click on Next button because the validation depends on this path to confirm the error message
-    
+
+Message Error Must Select a Gender    
     Wait Until Element Is Visible       xpath=//div[@id="gender-error-message"]     10
     Page Should Contain     Selecione seu gênero
 
@@ -176,7 +180,8 @@ Must Insert a Day
     Click Element       xpath=//label[@for="gender_option_male"]        #Here the robot is selecting one of the radio button options
 
     Click Element                    xpath=//button[@data-testid="submit"]      #I already put the click on Next button because the validation depends on this path to confirm the error message
-    
+
+Message Error Must Insert a Day    
     Wait Until Element Is Visible       xpath=//div[@id="birthdate-error-day_invalid"]     10
     Page Should Contain     Insira o dia que você nasceu usando um número entre 1 e 31.
 
@@ -196,6 +201,7 @@ Select a Month
 
     Click Element                    xpath=//button[@data-testid="submit"]
 
+Message Error Select a Month
     Wait Until Element Is Visible       xpath=//div[@id="birthdate-error-month_invalid"]        10
     Page Should Contain         Selecione o mês de nascimento.
 
