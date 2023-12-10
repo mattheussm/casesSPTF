@@ -11,6 +11,7 @@ New session
     Open Browser        ${url}      chrome
 
 Click on SignUp button
+    Wait Until Element Is Visible       xpath=//button[@class="Button-sc-1dqy6lx-0 eOxaqu sibxBMlr_oxWTfBrEz2G"]        10
     Click Element       xpath=//button[@class="Button-sc-1dqy6lx-0 eOxaqu sibxBMlr_oxWTfBrEz2G"]
 
 Click on Submit Button      #this keyword belongs to Next button in signup form
