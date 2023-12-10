@@ -1,24 +1,69 @@
-Projeto de automação de teste no site do Spotify
+Projeto de Automação de Testes no Site do Spotify
 
 Objetivo
-Realizar validações no cadastro e login de usuário no site do Spotify, avaliando se há a aplicação de regras para tratar alguns erros forçados nos testes automatizados.
 
-Ferramentas 
+Este projeto tem como objetivo realizar validações no cadastro e login de usuários no site do Spotify, avaliando a aplicação de regras para lidar com erros específicos induzidos durante testes automatizados.
+
+Ferramentas
+
 Robot Framework
-Selenium Webdriver
-Biblioteca Selenium 
+Selenium WebDriver
+Biblioteca Selenium
 
 Requisitos
-Chrome e chromedriver na versão mais atual
-Biblioteca do selenium instalada no Visual Studio Code
+
+Certifique-se de que os seguintes requisitos sejam atendidos:
+
+Chrome e chromedriver na versão mais recente
+Biblioteca Selenium instalada no Visual Studio Code
 Python instalado
 
-Como usar
-Executar "robot -i [TAG do caso de teste] -d ./logs/ Tests/casesSPTF.robot" direto no terminal
+Como Utilizar
 
-Versão 
+Execute o seguinte comando diretamente no terminal:
+
+robot -i [TAG do caso de teste] -d ./logs/ Tests/casesSPTF.robot
+
+Versão
+
 1.0
 
 Créditos
-Esse script de automação de testes foi implementado por Matheus Moreira.
 
+Este script de automação de testes foi implementado por Matheus Moreira.
+
+_______________________________________________________________________________________
+
+Spotify Website Test Automation Project
+
+Objective
+
+This project aims to perform validations on user registration and login functionalities on the Spotify website. It involves assessing the implementation of rules to handle specific errors induced during automated testing.
+
+Tools
+
+Robot Framework
+Selenium WebDriver
+Selenium Library
+
+Requirements
+
+Ensure the following prerequisites are met:
+
+Chrome and chromedriver in the latest version
+Selenium library installed in Visual Studio Code
+Python installed
+
+How to Use
+
+Execute the following command directly in the terminal:
+
+robot -i [test case TAG] -d ./logs/ Tests/casesSPTF.robot
+
+Version
+
+1.0
+
+Credits
+
+This test automation script was implemented by Matheus Moreira.
