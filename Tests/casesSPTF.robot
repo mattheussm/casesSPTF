@@ -6,7 +6,7 @@ Resource        ../resources/base_sptf.robot
 ***Test Cases***
 SignUp spotify
     [Tags]      signup  Regressao
-    # robot -i signup -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup -d ./logs/ tests/casesSPTF.robot
     New session
     
     Click on SignUp button
@@ -32,7 +32,7 @@ SignUp spotify
 
 Signup Without Email
     [Tags]      signup_without_email    Regressao
-    # robot -i signup_without_email -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_without_email -d ./logs/ tests/casesSPTF.robot
     New session
 
     Click on SignUp button
@@ -42,7 +42,7 @@ Signup Without Email
 
 Signup Without Password
     [Tags]      signup_without_password Regressao
-    # robot -i signup_without_password -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_without_password -d ./logs/ tests/casesSPTF.robot
     New session
 
     Click on SignUp button
@@ -55,7 +55,7 @@ Signup Without Password
 
 Password With Less Than 8 Characters
     [Tags]      password_less_characters    Regressao
-    # robot -i signup_less_characters -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_less_characters -d ./logs/ tests/casesSPTF.robot
     New session
 
     Click on SignUp button
@@ -69,7 +69,7 @@ Password With Less Than 8 Characters
 
 Weak Password
     [Tags]      weak_password   Regressao
-    # robot -i weak_password -d ./logs/ Tests/casesSPTF.robot
+    # robot -i weak_password -d ./logs/ tests/casesSPTF.robot
     New session
 
     Click on SignUp button
@@ -82,7 +82,7 @@ Weak Password
 
 Signup Without Name
     [Tags]      signup_without_name Regressao
-    # robot -i signup_without_name -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_without_name -d ./logs/ tests/casesSPTF.robot
     New session
     
     Click on SignUp button
@@ -101,7 +101,7 @@ Signup Without Name
 
 Signup Without Birth Date
     [Tags]      signup_without_birthdate    Regressao
-    # robot -i signup_without_birthdate -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_without_birthdate -d ./logs/ tests/casesSPTF.robot
     New session
     
     Click on SignUp button
@@ -120,7 +120,7 @@ Signup Without Birth Date
 
 Signup Without Day
     [Tags]      signup_without_day  Regressao
-    # robot -i signup_without_day -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_without_day -d ./logs/ tests/casesSPTF.robot
     New session
     
     Click on SignUp button
@@ -139,7 +139,7 @@ Signup Without Day
 
 Signup Without Month
     [Tags]      signup_without_month    Regressao
-    # robot -i signup_without_month -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_without_month -d ./logs/ tests/casesSPTF.robot
     New session
     
     Click on SignUp button
@@ -158,7 +158,7 @@ Signup Without Month
 
 Signup Without Gender
     [Tags]      signup_without_gender   Regressao
-    # robot -i signup_without_gender -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_without_gender -d ./logs/ tests/casesSPTF.robot
     New session
     
     Click on SignUp button
@@ -177,7 +177,7 @@ Signup Without Gender
 
 Register Without Agree with Terms
     [Tags]      register_without_terms  Regressao
-    # robot -i signup_without_terms -d ./logs/ Tests/casesSPTF.robot
+    # robot -i signup_without_terms -d ./logs/ tests/casesSPTF.robot
     New session
     
     Click on SignUp button
@@ -201,7 +201,7 @@ Register Without Agree with Terms
 
 Login With Email
     [Tags]      login_ok    Regressao
-    # robot -i login_ok -d ./logs/ Tests/casesSPTF.robot
+    # robot -i login_ok -d ./logs/ tests/casesSPTF.robot
     New session
 
     Click on SignUp button
@@ -237,7 +237,7 @@ Login With Email
 
 Login With Wrong Email
     [Tags]      login_wrong_email   Regressao
-    # robot -i login_wrong_email -d ./logs/ Tests/casesSPTF.robot
+    # robot -i login_wrong_email -d ./logs/ tests/casesSPTF.robot
     New session
     Click on Login Button
     Page Should Contain     Entrar no Spotify
@@ -250,7 +250,7 @@ Login With Wrong Email
 
 Login Without Email
     [Tags]      login_without_email Regressao
-    # robot -i login_without_email -d ./logs/ Tests/casesSPTF.robot
+    # robot -i login_without_email -d ./logs/ tests/casesSPTF.robot
     New session
     Click on Login Button
     Page Should Contain     Entrar no Spotify
